@@ -27,6 +27,7 @@
         <td><%= book3.price %></td>
         <td><%= book3.publisher %></td>
         <td><%= book3.date %></td>
+        <td><%= book3.date.strftime('%Y/%m/%d') %></td>
         <td><%= book3.isbn %></td>
         <td><%= link_to '見る', book3,class:"btn btn-info btn-xs" %></td>
         <td><%= link_to '編集する', edit_book3_path(book3),class:"btn btn-success btn-xs" %></td>
