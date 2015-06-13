@@ -24,7 +24,7 @@
         <td><img src="<%= book3.img %>" alt=""  class="img-responsive"></td>
         <td><%= book3.bookname %></td>
         <td><%= book3.author %></td>
-        <td><%= book3.price %></td>
+        <td><%= number_to_currency(book3.price, unit: '¥', precision: 0) %></td>
         <td><%= book3.publisher %></td>
         <td><%= book3.date %></td>
         <td><%= book3.date.strftime('%Y/%m/%d') %></td>
