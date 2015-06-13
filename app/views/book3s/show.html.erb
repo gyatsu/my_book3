@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>画像:</strong>
+  <img src="<%= @book3.img %>">
+</p>
+
+<p>
+  <strong>書名:</strong>
+  <%= @book3.bookname %>
+</p>
+
+<p>
+  <strong>著者:</strong>
+  <%= @book3.author %>
+</p>
+
+<p>
+  <strong>価格:</strong>
+  <%= @book3.price %>
+</p>
+
+<p>
+  <strong>出版社:</strong>
+  <%= @book3.publisher %>
+</p>
+
+<p>
+  <strong>発行日:</strong>
+  <%= @book3.date %>
+</p>
+
+<p>
+  <strong>ISBN:</strong>
+  <%= @book3.isbn %>
+</p>
+
+<%= link_to '編集しよう', edit_book3_path(@book3),class:"btn btn-success btn-xs" %> |
+<%= link_to '戻るぜ', book3s_path,class:"btn btn-info btn-xs" %>

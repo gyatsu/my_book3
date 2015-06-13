@@ -1,0 +1,43 @@
+<div class="col-lg-12">
+
+<p id="notice"><%= notice %></p>
+
+<h1>蔵書リストかも</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>画像</th>
+      <th>書名</th>
+      <th>著者</th>
+      <th>価格</th>
+      <th>出版社</th>
+      <th>発行日</th>
+      <th>ISBN</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book3s.each do |book3| %>
+      <tr>
+        <td><img src="<%= book3.img %>" alt=""  class="img-responsive"></td>
+        <td><%= book3.bookname %></td>
+        <td><%= book3.author %></td>
+        <td><%= book3.price %></td>
+        <td><%= book3.publisher %></td>
+        <td><%= book3.date %></td>
+        <td><%= book3.isbn %></td>
+        <td><%= link_to '見る', book3,class:"btn btn-info btn-xs" %></td>
+        <td><%= link_to '編集する', edit_book3_path(book3),class:"btn btn-success btn-xs" %></td>
+        <td><%= link_to '消す', book3, method: :delete, data: { confirm: 'マジで消すけど大丈夫?' } ,class:"btn btn-danger btn-xs" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to '登録するよ〜', new_book3_path,class:"btn btn-primary btn-lg" %>
+</div>
